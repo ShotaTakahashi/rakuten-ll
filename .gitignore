@@ -1,0 +1,17 @@
+.idea
+*.iml
+*.xml
+__pycache__
+.cache
+*.lprof
+*.prof
+*.py.lprof
+*.py.prof
+.DS_Store
+.ipynb_checkpoints
+*.txt
+*.csv
+*.xlsx
+performance_result
+*.png
+.env
