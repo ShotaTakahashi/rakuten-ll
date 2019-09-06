@@ -3,11 +3,18 @@ import json
 from pdb import set_trace
 
 def get_user_from_db(user_id):
-    connection = pymysql.connect(host='localhost',
-            user='zhaoxin',
-            password='sinnjiru',
+    with open('../database.json', 'r') as f:
+        config = json.load(f)
+        host = config['host']
+        user = config['user']
+        password = config['password']
+        database = config['database']
+        
+    connection = pymysql.connect(host=host,
+            user=user,
+            password=password,
             charset='utf8mb4',
-            db='Rakuten_ll',
+            db=database,
             cursorclass=pymysql.cursors.DictCursor)
 
     with connection.cursor() as cursor:
@@ -30,4 +37,4 @@ def get_user_from_db(user_id):
             guidance_mes['region'].append(lan['region'])
         return json.dumps(guidance_mes)
 
-
+print(get_user_from_db(1))
