@@ -11,8 +11,25 @@ def get_user_from_db(user_id):
             cursorclass=pymysql.cursors.DictCursor)
 
     with connection.cursor() as cursor:
-        sql = "SELECT * FROM `%s` WHERE guidance_id=%d"%('guidance' ,user_id)
+        sql = "SELECT * FROM `guidance` WHERE guidance_id=%d "%(user_id)
         cursor.execute(sql)
-        result = cursor.fetchone()
-        print(json.dumps(result))
-        return json.dumps(result)
+        guidance_mes = cursor.fetchone()
+
+        sql = "SELECT language FROM language WHERE language_id in (SELECT language_id FROM `available_language` WHERE guidance_id=%d)"%(user_id)
+        cursor.execute(sql)
+        languages = cursor.fetchall()
+        guidance_mes.update({'language':[]})
+        for lan in languages:
+            guidance_mes['language'].append(lan['language'])
+        
+        sql = "SELECT region FROM region WHERE region_id in (SELECT region_id FROM `activity_area` WHERE guidance_id=%d)"%(user_id)
+        cursor.execute(sql)
+        regions = cursor.fetchall()
+        guidance_mes.update({'region':[]})
+        for lan in regions:
+            guidance_mes['region'].append(lan['region'])
+
+        return json.dumps(guidance_mes)
+
+
+get_user_from_db(1)
