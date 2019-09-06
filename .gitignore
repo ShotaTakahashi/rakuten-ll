@@ -16,3 +16,4 @@ performance_result
 *.png
 .vscode
 .env
+*.json
