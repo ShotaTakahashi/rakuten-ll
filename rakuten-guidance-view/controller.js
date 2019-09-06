@@ -1,6 +1,4 @@
-
-
-とりあえずJavaScriptでAPI叩くときの雛形
+// とりあえずJavaScriptでAPI叩くときの雛形
 
 //XMLHttpRequestの作成
 var request = new XMLHttpRequest();
@@ -15,5 +13,3 @@ request.onload = function () {
 }
 
 request.send();
-
-//
