@@ -17,39 +17,37 @@
         <div class="section1">
             <p1>ガイダンスへようこそ</p1>
 
-        <div class="search-teacher">
+        <div class="form-search-teacher">
+            <form action="a" method="GET">
             <div class="select-language">
-                <form>
-                    <select>
-                        <option value="English">English</option>
-                        <option value="Japanese">Japanese</option>
-                        <option value="China">China</option>
-                    </select>
-                </form>
+                <select>
+                    <option value="English">English</option>
+                    <option value="Japanese">Japanese</option>
+                    <option value="China">China</option>
+                </select>
             </div>
             <div class="select-gender">
-                <form>
-                    <select>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                </form>
+                <select>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
             </div>
             <div class="select-price">
-                <form>
-                    <select>
-                        <option value="500">~500</option>
-                        <option value="1000">500~1000</option>
-                        <option value="1500">1000~1500</option>
-                    </select>
-                </form>
+                <select>
+                    <option value="500">~500</option>
+                    <option value="1000">500~1000</option>
+                    <option value="1500">1000~1500</option>
+                </select>
             </div>
             <div class="select-region">
                 <input id="tokyo_id" type="radio" name="tokyo" value="tokyo" onclick="radioDeselection(this, 1)">東京
                 <input type="radio" name="saitama" value="saitama">埼玉
                 <button type="button" onclick="radioDeselection()">選択解除</button>
             </div>
-        </div>
+            <div>
+                <button>Send my greetings</button>
+            </div>
+            </form>
         </div>
         <footer>
             <ul>
