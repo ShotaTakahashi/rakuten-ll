@@ -9,6 +9,7 @@ def get_user_from_db(user_id):
         user = config['user']
         password = config['password']
         database = config['database']
+
     connection = pymysql.connect(host=host,
             user=user,
             password=password,
@@ -35,6 +36,3 @@ def get_user_from_db(user_id):
         for lan in regions:
             guidance_mes['region'].append(lan['region'])
         return json.dumps(guidance_mes)
-
-
-print(get_user_from_db('1'))
