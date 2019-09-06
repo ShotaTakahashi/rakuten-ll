@@ -90,7 +90,7 @@ if __name__ == "__main__":
         ('region_id','INT'))
     
     # Creat tables
-    mysql = SQL('localhost','zhaoxin','sinnjiru','Rakuten_ll')
+    mysql = SQL('localhost','username','passward','Rakuten_ll')
     inserts = []
     mysql.CreatDataBase('Rakuten_ll')
     mysql.CreatTableSQL('guidance',guidance_itemsDict)
