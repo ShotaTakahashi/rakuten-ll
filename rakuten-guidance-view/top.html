@@ -1,0 +1,83 @@
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>こんにちは</title>
+    </head>
+    <body>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- header -->
+        <header>
+            <h1>私たちのサービスへようこそ</h1>
+            <nav>
+                <li><a href="">ボタン</a></li>
+                <li><a href="">ボタン</a></li>
+            </nav>
+        </header>
+        <!-- headerここまで -->
+        <div class="section1">
+            <p1>ガイダンスへようこそ</p1>
+
+        <div class="search-teacher">
+            <div class="select-language">
+                <form>
+                    <select>
+                        <option value="English">English</option>
+                        <option value="Japanese">Japanese</option>
+                        <option value="China">China</option>
+                    </select>
+                </form>
+            </div>
+            <div class="select-gender">
+                <form>
+                    <select>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </form>
+            </div>
+            <div class="select-price">
+                <form>
+                    <select>
+                        <option value="500">~500</option>
+                        <option value="1000">500~1000</option>
+                        <option value="1500">1000~1500</option>
+                    </select>
+                </form>
+            </div>
+            <div class="select-region">
+                <input id="tokyo_id" type="radio" name="tokyo" value="tokyo" onclick="radioDeselection(this, 1)">東京
+                <input type="radio" name="saitama" value="saitama">埼玉
+                <button type="button" onclick="radioDeselection()">選択解除</button>
+            </div>
+        </div>
+        </div>
+        <footer>
+            <ul>
+                <li><a href="">お問い合わせ</a></li>
+                <li><a href="">このサイトについて</a></li>
+                <li><a href="">利用規約</a></li>
+            </ul>
+            <p>
+                <small>楽天トラベル</small>
+            </p>
+        </footer>
+        <script>
+            jQuery(function(){
+                alert("Hello")
+            });
+            tokyo_id.onclick = function id1Click() {
+            alert("id_1クリックしたよ！");
+            }
+            function radioDeselection(already, numeric) {
+  if(remove == numeric) {
+    already.checked = false;
+    remove = 0;
+  } else {
+    remove = numeric;
+  }
+}
+        </script>
+    </body>
+</html>
+
+
