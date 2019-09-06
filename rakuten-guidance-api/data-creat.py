@@ -5,12 +5,12 @@ import json
 # Connect to the database
 class SQL():
     def __init__(self,Host,User,Password, databaseName):
-        # self.connection = pymysql.connect(host=Host,
-        #                             user=User,
-        #                             password=Password,
-        #                             charset='utf8mb4',
-        #                             cursorclass=pymysql.cursors.DictCursor)
-        # self.CreatDataBase(databaseName)
+        self.connection = pymysql.connect(host=Host,
+                                    user=User,
+                                    password=Password,
+                                    charset='utf8mb4',
+                                    cursorclass=pymysql.cursors.DictCursor)
+        self.CreatDataBase(databaseName)
         self.connection = pymysql.connect(host=Host,
                                     user=User,
                                     password=Password,
