@@ -2,9 +2,10 @@
     <head>
         <meta charset="UTF-8">
         <title>こんにちは</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="controller.js"></script>
     </head>
     <body>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <!-- header -->
         <header>
             <h1>私たちのサービスへようこそ</h1>
@@ -18,36 +19,53 @@
             <p1>ガイダンスへようこそ</p1>
 
         <div class="form-search-teacher">
-            <form action="a" method="GET">
+            <!--<form action="/teachers/search/" method="GET" id="search-teachers">-->
             <div class="select-language">
-                <select>
-                    <option value="English">English</option>
-                    <option value="Japanese">Japanese</option>
-                    <option value="China">China</option>
+                <select id="language">
+                    <option name="English" value="English">English</option>
+                    <option name="Japanese" value="Japanese">Japanese</option>
+                    <option name="china" value="China">China</option>
                 </select>
             </div>
             <div class="select-gender">
-                <select>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
+                <select id="sex">
+                    <option name="Male" value="Male">Male</option>
+                    <option name="Female" value="Female">Female</option>
                 </select>
             </div>
             <div class="select-price">
-                <select>
-                    <option value="500">~500</option>
-                    <option value="1000">500~1000</option>
-                    <option value="1500">1000~1500</option>
-                </select>
+                <p>最低金額</p>
+                <input id="minprice" type="text" value="">
+                <p>最高金額</p>
+                <input id="maxprice" type="text" value="">
+            </div>
+            <div class="age">
+                <p>最低年齢</p>
+                <input id="minage" type="text" value="" >
+                <p>最高年齢</p>
+                <input id="maxage" type="text" value="">
             </div>
             <div class="select-region">
-                <input id="tokyo_id" type="radio" name="tokyo" value="tokyo" onclick="radioDeselection(this, 1)">東京
+                <!--<input id="tokyo_id" type="radio" name="tokyo" value="tokyo" onclick="radioDeselection(this, 1)">東京
                 <input type="radio" name="saitama" value="saitama">埼玉
                 <button type="button" onclick="radioDeselection()">選択解除</button>
+                -->
+                <select id="region">
+                    <option value="sinzyuku">sinzyuku</option>
+                    <option value="ikebukuro">ikebukuro</option>
+                    <option value="ebisu">ebisu</option>
+                </select>
             </div>
+            <div class="rate">
+                    <p>最低年齢</p>
+                    <input id="minrate" type="text" value="" >
+                    <p>最高年齢</p>
+                    <input id="maxrate" type="text" value="">
+                </div>
             <div>
-                <button>Send my greetings</button>
+                <button id="search-button" value="送信" onclick = "searchTeacher()">
             </div>
-            </form>
+            <!--</form>-->
         </div>
         <footer>
             <ul>
@@ -60,6 +78,36 @@
             </p>
         </footer>
         <script>
+        /*
+        //window.addEventListener('DOMContentLoaded', function(e){
+        //document.querySelector('#search-teachers').addEventListener('submit',function(e){
+            //var t=e.target;
+            //e.preventDefault();
+            //var url=t.getAttribute('action')+t.querySelector('select').value;
+            //console.log(url)
+            //location.href=url;
+        //});
+        //});
+        
+        
+        //document.getElementById("search-button").onclick = function() {
+            //var request = new XMLHttpRequest();
+            //var URL = "http://api.openweathermap.org/data/2.5/weather?q=London&APPID=3b52a6b4f0be239a8357ec950fe1e1b9"
+            //var URL_header = "search/teacher"
+            //var sex = document.getElementById()
+            //request.open('GET', URL, true);
+            //request.responseType = 'json';
+            //request.onload = function () {
+                //var data = this.response;
+                //console.log(data);
+            //};
+            //request.send();
+        //};
+
+        
+
+
+
             jQuery(function(){
                 alert("Hello")
             });
@@ -74,6 +122,7 @@
     remove = numeric;
   }
 }
+*/
         </script>
     </body>
 </html>
