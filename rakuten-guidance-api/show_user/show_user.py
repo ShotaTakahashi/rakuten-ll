@@ -31,4 +31,3 @@ def get_user_from_db(user_id):
         return json.dumps(guidance_mes)
 
 
-get_user_from_db(1)
