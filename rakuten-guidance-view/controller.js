@@ -24,5 +24,6 @@ function getWeatherFromApi() {
         weatherOfThisTime = jsonWeatherData.weather[0].main;
 
         document.write("It is \"" + weatherOfThisTime + "\" in London now.");
+        console.log(jsonWeatherData);
     });
 }
