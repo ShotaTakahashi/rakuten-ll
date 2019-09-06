@@ -73,6 +73,7 @@ if __name__ == "__main__":
         ('name','VARCHAR(255)'),
         ('sex','VARCHAR(255)'),
         ('price','INT'), 
+        ('age','INT'), 
         ('rating','FLOAT'))
     language_itemsDict = (   
         ('language_id','INT PRIMARY KEY'), 
@@ -147,24 +148,28 @@ if __name__ == "__main__":
         ('name','Mikki'),
         ('sex','M'),
         ('price',3000),
+        ('age',54),
         ('rating',4.2)))
     guidance_table_data.append((
         ('guidance_id',1),
         ('name','Doraemon'),  
         ('sex','M'),
         ('price',4000),
+        ('age',200),
         ('rating',3.7)))
     guidance_table_data.append((
         ('guidance_id',2),
         ('name','Shizuka'),
         ('sex','F'),
         ('price',2000),
+        ('age',10),
         ('rating',2.5)))
     guidance_table_data.append((
         ('guidance_id',3),
         ('name','Nyarth'),
         ('sex','M'),
         ('price',4000),
+        ('age',5),
         ('rating',3.2)))
     for item in guidance_table_data:
         mysql.InsertSQL('guidance', item)
