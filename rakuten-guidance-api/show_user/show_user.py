@@ -28,7 +28,6 @@ def get_user_from_db(user_id):
         guidance_mes.update({'region':[]})
         for lan in regions:
             guidance_mes['region'].append(lan['region'])
-
         return json.dumps(guidance_mes)
 
 
