@@ -1,15 +1,16 @@
 import pymysql.cursors
 import numpy as np
+import json
 
 # Connect to the database
 class SQL():
     def __init__(self,Host,User,Password, databaseName):
-        # self.connection = pymysql.connect(host=Host,
-        #                             user=User,
-        #                             password=Password,
-        #                             charset='utf8mb4',
-        #                             cursorclass=pymysql.cursors.DictCursor)
-        # self.CreatDataBase(databaseName)
+        self.connection = pymysql.connect(host=Host,
+                                    user=User,
+                                    password=Password,
+                                    charset='utf8mb4',
+                                    cursorclass=pymysql.cursors.DictCursor)
+        self.CreatDataBase(databaseName)
         self.connection = pymysql.connect(host=Host,
                                     user=User,
                                     password=Password,
@@ -91,7 +92,9 @@ if __name__ == "__main__":
         ('region_id','INT'))
     
     # Creat tables
-    mysql = SQL('localhost','root','','Rakuten_ll')
+    with open('./database.json', 'r') as f:
+        config = json.load(f)
+        mysql = SQL(config['host'],config['user'],config['password'],config['database'])
     inserts = []
     mysql.CreatDataBase('Rakuten_ll')
     mysql.CreatTableSQL('guidance',guidance_itemsDict)
