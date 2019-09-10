@@ -3,7 +3,7 @@ function searchTeacher(){
     console.log("hello");
     params_array = [];
     var request = new XMLHttpRequest();
-    var headerURL = "http://127.0.0.1:5000/teachers/search/";
+    var headerURL = "http://127.0.0.1:5000/";
     var sex_val = "sex=" + $("#sex").val();
     var language_val = "language=" + $("#language").val();
     var region_val = "region=" + $("#region").val();
@@ -46,7 +46,7 @@ function searchTeacher(){
         //var maxrate_val = "maxrate=" + $("#maxrate").val();
         //params_array.push(maxrate_val);
     //}
-    var params = "?";
+    var params = "teachers/search/?";
     params_array.forEach(function(val,i){
         //console.log(val);
         //console.log(i);
@@ -72,10 +72,13 @@ function searchTeacher(){
     console.log(sex_val);
     //console.log(minage_val);
 
-    $.getJSON(requestURL,function(json){
+    var kari_requestURL = "http://127.0.0.1:5000/teachers/user/?user_id=1"
+    $.getJSON(kari_requestURL,function(json){
+        console.log(json);
         teachersData = JSON.stringify(json);
+        console.log(teachersData);
 
-        jsonteachersData = JSON.parse(weatherData);
+        jsonteachersData = JSON.parse(teachersData);
         //weatherOfThisTime = jsonWeatherData.weather[0].main;
 
         //document.write("It is \"" + weatherOfThisTime + "\" in London now.");
