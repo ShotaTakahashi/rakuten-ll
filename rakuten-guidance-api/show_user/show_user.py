@@ -1,4 +1,3 @@
-import os, sys
 import pymysql.cursors
 import json
 from pdb import set_trace
