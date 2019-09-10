@@ -1,5 +1,6 @@
 import pymysql.cursors
 import numpy as np
+import json
 
 # Connect to the database
 class SQL():
@@ -73,6 +74,7 @@ if __name__ == "__main__":
         ('name','VARCHAR(255)'),
         ('sex','VARCHAR(255)'),
         ('price','INT'), 
+        ('age','INT'), 
         ('rating','FLOAT'))
     language_itemsDict = (   
         ('language_id','INT PRIMARY KEY'), 
@@ -90,7 +92,9 @@ if __name__ == "__main__":
         ('region_id','INT'))
     
     # Creat tables
-    mysql = SQL('localhost','username','passward','Rakuten_ll')
+    with open('./database.json', 'r') as f:
+        config = json.load(f)
+        mysql = SQL(config['host'],config['user'],config['password'],config['database'])
     inserts = []
     mysql.CreatDataBase('Rakuten_ll')
     mysql.CreatTableSQL('guidance',guidance_itemsDict)
@@ -144,28 +148,32 @@ if __name__ == "__main__":
 
     guidance_table_data.append((
         ('guidance_id',0),
-        ('name','ミッキー'),
+        ('name','Mikki'),
         ('sex','M'),
         ('price',3000),
+        ('age',54),
         ('rating',4.2)))
     guidance_table_data.append((
         ('guidance_id',1),
-        ('name','ドラえもん'),  
+        ('name','Doraemon'),  
         ('sex','M'),
         ('price',4000),
+        ('age',200),
         ('rating',3.7)))
     guidance_table_data.append((
         ('guidance_id',2),
-        ('name','静香ちゃん'),
+        ('name','Shizuka'),
         ('sex','F'),
         ('price',2000),
+        ('age',10),
         ('rating',2.5)))
     guidance_table_data.append((
         ('guidance_id',3),
-        ('name','ニャース'),
+        ('name','Nyarth'),
         ('sex','M'),
         ('price',4000),
-        ('rating',2.5)))
+        ('age',5),
+        ('rating',3.2)))
     for item in guidance_table_data:
         mysql.InsertSQL('guidance', item)
         
