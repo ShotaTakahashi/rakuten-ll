@@ -1,9 +1,10 @@
 import pymysql.cursors
 import json
-from pdb import set_trace
+
 
 class NotFoundExceptionError(Exception):
     pass
+
 
 def get_user_from_db(user_id):
     with open('./database.json', 'r') as f:
@@ -42,5 +43,3 @@ def get_user_from_db(user_id):
         for lan in regions:
             guidance_mes['region'].append(lan['region'])
         return json.dumps(guidance_mes)
-
-# print(get_user_from_db('100'))
