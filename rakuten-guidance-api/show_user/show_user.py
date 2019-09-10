@@ -1,9 +1,13 @@
+import os, sys
 import pymysql.cursors
 import json
 from pdb import set_trace
 
+class NotFoundExceptionError(Exception):
+    pass
+
 def get_user_from_db(user_id):
-    with open('./database.json', 'r') as f:
+    with open('../database.json', 'r') as f:
         config = json.load(f)
         host = config['host']
         user = config['user']
@@ -22,6 +26,9 @@ def get_user_from_db(user_id):
         cursor.execute(sql)
         guidance_mes = cursor.fetchone()
 
+        if guidance_mes is None:
+            raise NotFoundExceptionError("Guidance Id do not exists")
+
         sql = "SELECT language FROM language WHERE language_id in (SELECT language_id FROM `available_language` WHERE guidance_id=%s)"%(user_id)
         cursor.execute(sql)
         languages = cursor.fetchall()
@@ -36,3 +43,5 @@ def get_user_from_db(user_id):
         for lan in regions:
             guidance_mes['region'].append(lan['region'])
         return json.dumps(guidance_mes)
+
+# print(get_user_from_db('100'))
