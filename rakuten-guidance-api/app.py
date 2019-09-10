@@ -17,7 +17,7 @@ def all_search_get():
             abort(404)
 
 
-@app.route('/teachers/user', methods=['GET', 'POST', 'PUT'])
+@app.route('/teachers/user/', methods=['GET', 'POST', 'PUT'])
 def operate_user():
     if request.method == 'GET':
         try:
