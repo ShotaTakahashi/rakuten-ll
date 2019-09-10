@@ -21,6 +21,7 @@
         <div class="form-search-teacher">
             <!--<form action="/teachers/search/" method="GET" id="search-teachers">-->
             <div class="select-language">
+                <p>言語</p>
                 <select id="language">
                     <option name="English" value="English">English</option>
                     <option name="Japanese" value="Japanese">Japanese</option>
@@ -28,11 +29,21 @@
                 </select>
             </div>
             <div class="select-gender">
+                <p>性別</p>
                 <select id="sex">
                     <option name="Male" value="Male">Male</option>
                     <option name="Female" value="Female">Female</option>
                 </select>
             </div>
+            <div class="select-region">
+                <p>場所</p>
+                <select id="region">
+                    <option value="sinzyuku">sinzyuku</option>
+                    <option value="ikebukuro">ikebukuro</option>
+                    <option value="ebisu">ebisu</option>
+                </select>
+            </div>
+
             <div class="select-price">
                 <p>最低金額</p>
                 <input id="minprice" type="text" value="">
@@ -45,25 +56,15 @@
                 <p>最高年齢</p>
                 <input id="maxage" type="text" value="">
             </div>
-            <div class="select-region">
-                <!--<input id="tokyo_id" type="radio" name="tokyo" value="tokyo" onclick="radioDeselection(this, 1)">東京
-                <input type="radio" name="saitama" value="saitama">埼玉
-                <button type="button" onclick="radioDeselection()">選択解除</button>
-                -->
-                <select id="region">
-                    <option value="sinzyuku">sinzyuku</option>
-                    <option value="ikebukuro">ikebukuro</option>
-                    <option value="ebisu">ebisu</option>
-                </select>
-            </div>
+            
             <div class="rate">
-                    <p>最低年齢</p>
-                    <input id="minrate" type="text" value="" >
-                    <p>最高年齢</p>
-                    <input id="maxrate" type="text" value="">
-                </div>
+                <p>最低レート</p>
+                <input id="minrate" type="text" value="" >
+                <p>最高レート</p>
+                <input id="maxrate" type="text" value="">
+            </div>
             <div>
-                <button id="search-button" value="送信" onclick = "searchTeacher()">
+                <button id="search-button" value="送信" onclick = "searchTeacher()">送信</button>
             </div>
             <!--</form>-->
         </div>
