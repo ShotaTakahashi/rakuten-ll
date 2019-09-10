@@ -1,6 +1,7 @@
 import pymysql.cursors
 import json
-from show_user.show_user import get_user_from_db
+from operate_user.show_user import get_user_from_db
+
 
 def get(request_params):
     region = request_params.get('region')
@@ -40,6 +41,7 @@ def connect_db(host, user, password, db):
                                  charset = 'utf8mb4',
                                  cursorclass=pymysql.cursors.DictCursor)
     return connection
+
 
 def get_guidance_info(connection, sex, language, region, price_low, price_high, rating_low, rating_high, age_low, age_high):
     result = None
