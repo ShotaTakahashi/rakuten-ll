@@ -7,7 +7,7 @@ class NotFoundExceptionError(Exception):
     pass
 
 def get_user_from_db(user_id):
-    with open('../database.json', 'r') as f:
+    with open('./database.json', 'r') as f:
         config = json.load(f)
         host = config['host']
         user = config['user']
