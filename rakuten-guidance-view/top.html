@@ -1,30 +1,24 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>こんにちは</title>
+        <title>Rakten Travel Language Translate Agency</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script type="text/javascript" src="controller.js"></script>
     </head>
     <body>
         <!-- header -->
         <header>
-            <h1></h1>
-            <nav>
-                <li><a href="">ボタン</a></li>
-                <li><a href="">ボタン</a></li>
-            </nav>
         </header>
         <!-- headerここまで -->
         <div class="section1">
             <p1>Welcome to Rakten Travel Language Translate Agency!</p1>
 
         <div class="form-search-teacher">
-            <!--<form action="/teachers/search/" method="GET" id="search-teachers">-->
             <div class="select-language">
                 <p>Language</p>
                 <select id="language">
                     <option name="English" value="English">English</option>
-                    <option name="Japanese" value="Japanese" selected>Japanese</option>
+                    <option name="Japanese" value="Japanese">Japanese</option>
                     <option name="china" value="China">China</option>
                 </select>
             </div>
@@ -45,74 +39,67 @@
                     <option value="meguro">meguro</option>
                 </select>
             </div>
-
             <div class="select-price">
                 <p>MinPrice</p>
-                <select id="minprice">
+                <select id="price_low">
                     <option value="0">下限なし</option>
-                    <option value="500">500~</option>
-                    <option value="1000">1000~</option>
-                    <option value="2000">2000~</option>
-                    <option value="3000">3000~</option>
+                    <option value="500">500</option>
+                    <option value="1000">1000</option>
+                    <option value="2000">2000</option>
+                    <option value="3000">3000</option>
                 </select>
                 <!--<input id="minprice" type="text" value=""> -->
                 <p>MaxPrice</p>
-                <select id="maxprice">
-                    <option value="5000">~5000</option>
-                    <option value="6000">~6000</option>
-                    <option value="7000">~7000</option>
-                    <option value="8000">~8000</option>
-                    <option value="9000">~9000</option>
-                    <option value="1000000000000">上限なし</option>
+                <select id="price_high">
+                    <option value="5000">5000</option>
+                    <option value="6000">6000</option>
+                    <option value="7000">7000</option>
+                    <option value="8000">8000</option>
+                    <option value="9000">9000</option>
+                    <option value="1000000000000" selected>上限なし</option>
                 </select>
-                <!--<input id="maxprice" type="text" value=""> -->
             </div>
             <div class="age">
                 <p>MinAge</p>
-                <!--- <input id="minage" type="text" value="" >-->
-                <select id="minage">
-                    <option value="18">18~</option>
-                    <option value="25">25~</option>
-                    <option value="30">30~</option>
-                    <option value="40">40~</option>
-                    <option value="50">50~</option>
+                <select id="age_low">
+                    <option value="18">18</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="40">40</option>
+                    <option value="50">50</option>
                 </select>
                 <p>MaxAge</p>
-                <select id="maxage">
-                    <option value="18">~18</option>
-                    <option value="25">~25</option>
-                    <option value="30" selected>~30</option>
-                    <option value="40">~40</option>
-                    <option value="1000">上限なし</option>
+                <select id="age_high">
+                    <option value="18">18</option>
+                    <option value="25">25</option>
+                    <option value="30" selected>30</option>
+                    <option value="40">40</option>
+                    <option value="1000" selected>上限なし</option>
                 </select>
-                <!--- <input id="maxage" type="text" value="">-->
             </div>
             
             <div class="rate">
                 <p>MinRate</p>
-                <select id="minrate">
-                    <option value="0">0~</option>
-                    <option value="1">1~</option>
-                    <option value="2">2~</option>
-                    <option value="3">3~</option>
-                    <option value="4">4~</option>
-                    <option value="5">5~</option>
+                <select id="rating_low">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
-                <!--- <input id="minrate" type="text" value="" >-->
                 <p>MaxRate</p>
-                <select id="maxrate">
-                    <option value="1">~1</option>
-                    <option value="2">~2</option>
-                    <option value="3">~3</option>
-                    <option value="4">~4</option>
-                    <option value="5">~5</option>
+                <select id="rating_high">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected>5</option>
                 </select>
-                <!--<input id="maxrate" type="text" value="">-->
             </div>
             <div>
                 <button id="search-button" value="送信" onclick = "searchTeacher()">送信</button>
             </div>
-            <!--</form>-->
         </div>
         <footer>
             <ul>
@@ -124,53 +111,6 @@
                 <small>楽天トラベル</small>
             </p>
         </footer>
-        <script>
-        /*
-        //window.addEventListener('DOMContentLoaded', function(e){
-        //document.querySelector('#search-teachers').addEventListener('submit',function(e){
-            //var t=e.target;
-            //e.preventDefault();
-            //var url=t.getAttribute('action')+t.querySelector('select').value;
-            //console.log(url)
-            //location.href=url;
-        //});
-        //});
-        
-        
-        //document.getElementById("search-button").onclick = function() {
-            //var request = new XMLHttpRequest();
-            //var URL = "http://api.openweathermap.org/data/2.5/weather?q=London&APPID=3b52a6b4f0be239a8357ec950fe1e1b9"
-            //var URL_header = "search/teacher"
-            //var sex = document.getElementById()
-            //request.open('GET', URL, true);
-            //request.responseType = 'json';
-            //request.onload = function () {
-                //var data = this.response;
-                //console.log(data);
-            //};
-            //request.send();
-        //};
-
-        
-
-
-
-            jQuery(function(){
-                alert("Hello")
-            });
-            tokyo_id.onclick = function id1Click() {
-            alert("id_1クリックしたよ！");
-            }
-            function radioDeselection(already, numeric) {
-  if(remove == numeric) {
-    already.checked = false;
-    remove = 0;
-  } else {
-    remove = numeric;
-  }
-}
-*/
-        </script>
     </body>
 </html>
 
