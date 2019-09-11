@@ -48,30 +48,66 @@
 
             <div class="select-price">
                 <p>MinPrice</p>
-                <select id="region">
-                    <option value="0">0</option>
-                    <option value="500">~500</option>
-                    <option value="1000">~1000</option>
-                    <option value="2000">~2000</option>
-                    <option value="3000">~3000</option>
+                <select id="minprice">
+                    <option value="0">下限なし</option>
+                    <option value="500">500~</option>
+                    <option value="1000">1000~</option>
+                    <option value="2000">2000~</option>
+                    <option value="3000">3000~</option>
                 </select>
                 <!--<input id="minprice" type="text" value=""> -->
                 <p>MaxPrice</p>
-
+                <select id="maxprice">
+                    <option value="5000">~5000</option>
+                    <option value="6000">~6000</option>
+                    <option value="7000">~7000</option>
+                    <option value="8000">~8000</option>
+                    <option value="9000">~9000</option>
+                    <option value="1000000000000">上限なし</option>
+                </select>
                 <!--<input id="maxprice" type="text" value=""> -->
             </div>
             <div class="age">
                 <p>MinAge</p>
-                <input id="minage" type="text" value="" >
+                <!--- <input id="minage" type="text" value="" >-->
+                <select id="minage">
+                    <option value="18">18~</option>
+                    <option value="25">25~</option>
+                    <option value="30">30~</option>
+                    <option value="40">40~</option>
+                    <option value="50">50~</option>
+                </select>
                 <p>MaxAge</p>
-                <input id="maxage" type="text" value="">
+                <select id="maxage">
+                    <option value="18">~18</option>
+                    <option value="25">~25</option>
+                    <option value="30" selected>~30</option>
+                    <option value="40">~40</option>
+                    <option value="1000">上限なし</option>
+                </select>
+                <!--- <input id="maxage" type="text" value="">-->
             </div>
             
             <div class="rate">
                 <p>MinRate</p>
-                <input id="minrate" type="text" value="" >
+                <select id="minrate">
+                    <option value="0">0~</option>
+                    <option value="1">1~</option>
+                    <option value="2">2~</option>
+                    <option value="3">3~</option>
+                    <option value="4">4~</option>
+                    <option value="5">5~</option>
+                </select>
+                <!--- <input id="minrate" type="text" value="" >-->
                 <p>MaxRate</p>
-                <input id="maxrate" type="text" value="">
+                <select id="maxrate">
+                    <option value="1">~1</option>
+                    <option value="2">~2</option>
+                    <option value="3">~3</option>
+                    <option value="4">~4</option>
+                    <option value="5">~5</option>
+                </select>
+                <!--<input id="maxrate" type="text" value="">-->
             </div>
             <div>
                 <button id="search-button" value="送信" onclick = "searchTeacher()">送信</button>
