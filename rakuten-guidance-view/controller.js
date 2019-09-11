@@ -32,4 +32,4 @@ function searchTeacher(){
         console.log(jsonteachersData);
         return teachersData;
     });
-  };
+};
