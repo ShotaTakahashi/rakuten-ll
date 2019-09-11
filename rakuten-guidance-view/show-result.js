@@ -54,7 +54,9 @@ function displayOneCandidate(candidate) {
     var html = '<h2 id="h2"><span style="background-color:#FFCACA;">' + name + '</span></h2>' +
         '<h4>' + sex + '</h4>' +
         '<h4>' + language + '</h4>' +
-        '<ul class="cf">';
+        '<ul class="cf">' +
+        '<button  id="button" value=' + id + '>送信</button>';
+
 
     html += '</ul>';
 
