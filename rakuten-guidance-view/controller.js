@@ -33,3 +33,9 @@ function searchTeacher(){
         return teachersData;
     });
 };
+
+function showTeacher() {
+    var headerURL = "http://127.0.0.1:5000/";
+    var user_id = $("#guidance_id").val();
+    return headerURL + user_id;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="controller.js"></script>
+</head>
+<body>
+<dl id="wrap">
+    <script type="text/javascript">
+        $(function(){
+            var requestURL = showTeacher();
+            $.getJSON(requestURL, function(sample_list){
+                var h = '<dt>'
+                    + sample_list.name
+                    + '</dt>'
+                    + '<dd>'
+                    + sample_list.sex
+                    + '</dd>'
+                    + '<dd>'
+                    + sample_list.price
+                    + '</dd>'
+                    + '<dd>'
+                    + sample_list.age
+                    + '</dd>'
+                    + '<dd>'
+                    + sample_list.rating
+                    + '</dd>'
+                    + '<dd>'
+                    + sample_list.language
+                    + '</dd>'
+                    + '<dd>'
+                    + sample_list.region
+                    + '</dd>';
+                $("dl#wrap").append(h);
+            });
+        });
+    </script>
+</dl>
+</body>
+</html>
