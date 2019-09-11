@@ -9,12 +9,12 @@ function searchTeacher(){
     var region_val = "region=" + $("#region").val();
     params_array.push(sex_val,language_val,region_val)
 
-    add_params($("#minage").val(),"minage");
-    add_params($("#maxage").val(),"maxage");
-    add_params($("#minprice").val(),"minprice");
-    add_params($("#maxprice").val(),"maxprice");
-    add_params($("#minrate").val(),"minrate");
-    add_params($("#maxrate").val(),"maxrate");
+    add_params($("#minage").val(),"age_low");
+    add_params($("#maxage").val(),"age_high");
+    add_params($("#minprice").val(),"price_low");
+    add_params($("#maxprice").val(),"price_high");
+    add_params($("#minrate").val(),"rating_low");
+    add_params($("#maxrate").val(),"rating_high");
     
     //if ($("#minage").val() != ''){
         //var minage_val = "minage=" + $("#minage").val();
@@ -72,8 +72,8 @@ function searchTeacher(){
     console.log(sex_val);
     //console.log(minage_val);
 
-    var kari_requestURL = "http://127.0.0.1:5000/teachers/user/?user_id=1"
-    $.getJSON(kari_requestURL,function(json){
+    //var kari_requestURL = "http://127.0.0.1:5000/teachers/user/?user_id=1"
+    $.getJSON(requestURL,function(json){
         console.log(json);
         teachersData = JSON.stringify(json);
         console.log(teachersData);

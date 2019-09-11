@@ -8,7 +8,7 @@
     <body>
         <!-- header -->
         <header>
-            <h1>私たちのサービスへようこそ</h1>
+            <h1></h1>
             <nav>
                 <li><a href="">ボタン</a></li>
                 <li><a href="">ボタン</a></li>
@@ -16,51 +16,61 @@
         </header>
         <!-- headerここまで -->
         <div class="section1">
-            <p1>ガイダンスへようこそ</p1>
+            <p1>Welcome to Rakten Travel Language Translate Agency!</p1>
 
         <div class="form-search-teacher">
             <!--<form action="/teachers/search/" method="GET" id="search-teachers">-->
             <div class="select-language">
-                <p>言語</p>
+                <p>Language</p>
                 <select id="language">
                     <option name="English" value="English">English</option>
-                    <option name="Japanese" value="Japanese">Japanese</option>
+                    <option name="Japanese" value="Japanese" selected>Japanese</option>
                     <option name="china" value="China">China</option>
                 </select>
             </div>
             <div class="select-gender">
-                <p>性別</p>
+                <p>Sex</p>
                 <select id="sex">
-                    <option name="Male" value="Male">Male</option>
-                    <option name="Female" value="Female">Female</option>
+                    <option name="Male" value="M">Male</option>
+                    <option name="Female" value="F">Female</option>
                 </select>
             </div>
             <div class="select-region">
-                <p>場所</p>
+                <p>Region</p>
                 <select id="region">
-                    <option value="sinzyuku">sinzyuku</option>
-                    <option value="ikebukuro">ikebukuro</option>
-                    <option value="ebisu">ebisu</option>
+                    <option value="sinjuku">sinjuku</option>
+                    <option value="sibuya" selected>sibuya</option>
+                    <option value="chiyoda">chiyoda</option>
+                    <option value="sinagawa">sinagawa</option>
+                    <option value="meguro">meguro</option>
                 </select>
             </div>
 
             <div class="select-price">
-                <p>最低金額</p>
-                <input id="minprice" type="text" value="">
-                <p>最高金額</p>
-                <input id="maxprice" type="text" value="">
+                <p>MinPrice</p>
+                <select id="region">
+                    <option value="0">0</option>
+                    <option value="500">~500</option>
+                    <option value="1000">~1000</option>
+                    <option value="2000">~2000</option>
+                    <option value="3000">~3000</option>
+                </select>
+                <!--<input id="minprice" type="text" value=""> -->
+                <p>MaxPrice</p>
+
+                <!--<input id="maxprice" type="text" value=""> -->
             </div>
             <div class="age">
-                <p>最低年齢</p>
+                <p>MinAge</p>
                 <input id="minage" type="text" value="" >
-                <p>最高年齢</p>
+                <p>MaxAge</p>
                 <input id="maxage" type="text" value="">
             </div>
             
             <div class="rate">
-                <p>最低レート</p>
+                <p>MinRate</p>
                 <input id="minrate" type="text" value="" >
-                <p>最高レート</p>
+                <p>MaxRate</p>
                 <input id="maxrate" type="text" value="">
             </div>
             <div>
