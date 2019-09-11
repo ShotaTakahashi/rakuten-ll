@@ -33,12 +33,13 @@ def get(request_params):
     
     return guidances_json
 
+
 def connect_db(host, user, password, db):
-    connection = pymysql.connect(host = host,
-                                 user = user,
-                                 password = password,
-                                 db = db,
-                                 charset = 'utf8mb4',
+    connection = pymysql.connect(host=host,
+                                 user=user,
+                                 password=password,
+                                 db=db,
+                                 charset='utf8mb4',
                                  cursorclass=pymysql.cursors.DictCursor)
     return connection
 
