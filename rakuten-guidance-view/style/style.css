@@ -32,3 +32,65 @@ h2 {
     display: flex;
     justify-content: space-around;
 }
+
+#all-guidances {
+    display: -webkit-flex;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+}
+
+#one-box-for-guidance {
+    padding: 10px 10px;
+}
+
+#top-of-box {
+    display: -webkit-flex;
+    display: flex;
+}
+
+#guidance-img {
+    width: 150px;
+    height: 150px;
+    padding: 10px 10px;
+}
+
+#guidance-strings {
+
+}
+
+#guidance-name {
+    padding: 10px 10px;
+    font-size: 30px;
+}
+
+#guidance-languages {
+    display: -webkit-flex;
+    display: flex;
+}
+
+#guidance-language {
+    padding: 5px 10px;
+}
+
+#guidance-regions {
+    display: -webkit-flex;
+    display: flex;
+}
+
+#guidance-region {
+    padding: 5px 10px;
+}
+
+#guidance-price {
+    padding: 5px 10px;
+}
+#bottom-of-box {
+
+}
+
+#guidance-rating {
+    color: orange;
+    display: flex;
+    justify-content: center;
+}

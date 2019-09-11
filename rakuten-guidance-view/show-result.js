@@ -50,14 +50,57 @@ function displayOneCandidate(candidate) {
     var region = candidate.region;
     var rating = candidate.rating;
 
+    var img = "";
+    if (sex == 'M'){
+        img = "image/boy.png";
+    } else {
+        img = "image/girl.png";
+    }
 
-    var html = '<h2 id="h2"><span style="background-color:#FFCACA;">' + name + '</span></h2>' +
-        '<h4>' + sex + '</h4>' +
-        '<h4>' + language + '</h4>' +
-        '<ul class="cf">';
-
-    html += '</ul>';
+    var html = '<div id="all-guidances">' +
+        '  <button type="button" id="one-box-for-guidance">' +
+        '  <div id="top-of-box">' +
+        '  <div id="guidance-img-box">' +
+        '  <img src="' + img + '" id="guidance-img">' +
+        '  </div>' +
+        '  <div id="guidance-strings">' +
+        '  <div id="guidance-name">' + name + '</div>' +
+        '  <div id="guidance-languages">' +
+        '  <div id="guidance-language">' + language + '</div>' +
+        // '  <div id="guidance-language">English</div>' +
+        '  </div>' +
+        '  <div id="guidance-regions">' +
+        '  <div id="guidance-region">' + region + '</div>' +
+        // '  <div id="guidance-region">' + region + '</div>' +
+        '  </div>' +
+        '  <div id="guidance-price">¥' + price + '</div>' +
+        '  <div id="guidance-rating">★★★★☆</div>' +
+        '  </div>' +
+        '  </div>' +
+        '  </div>';
 
     return html;
 
 }
+//
+// <div id="all-guidances">
+//     <button type="button" id="one-box-for-guidance">
+//     <div id="top-of-box">
+//     <div id="guidance-img-box">
+//     <img src="img/boy.png" id="guidance-img">
+//     </div>
+//     <div id="guidance-strings">
+//     <div id="guidance-name">Mikki</div>
+//     <div id="guidance-languages">
+//     <div id="guidance-language">Japanese</div>
+//     <div id="guidance-language">English</div>
+//     </div>
+//     <div id="guidance-regions">
+//     <div id="guidance-region">Shinjuku</div>
+//     <div id="guidance-region">Shibuya</div>
+//     </div>
+//     <div id="guidance-price">¥3,000</div>
+// <div id="guidance-rating">★★★★☆</div>
+// </div>
+// </div>
+// </div>
