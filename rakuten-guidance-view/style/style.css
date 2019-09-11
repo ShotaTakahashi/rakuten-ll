@@ -24,6 +24,10 @@ h1:before {
     box-shadow: 0px 0px 0px 5px lightgreen;
 }
 
+h2 {
+    color: rebeccapurple;
+}
+
 .title-text {
     display: flex;
     justify-content: space-around;

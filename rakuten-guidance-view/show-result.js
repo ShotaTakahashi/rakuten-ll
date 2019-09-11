@@ -27,12 +27,17 @@ function showResults() {
 }
 
 function arrangeListOfCandidates(json) {
+    var html = "";
     var numberOfCandidates = Object.keys(json).length
     for (var i = 0; i < numberOfCandidates; i++){
         var data = json[i];
         console.log(data);
-        displayOneCandidate(data);
+        html = html + displayOneCandidate(data);
     }
+    // document.write(html);
+
+    var results = document.getElementById("guidance-list");
+    results.innerHTML = html;
 }
 
 function displayOneCandidate(candidate) {
@@ -45,17 +50,14 @@ function displayOneCandidate(candidate) {
     var region = candidate.region;
     var rating = candidate.rating;
 
-    document.write("名前："+name+"　　値段："+String(price)+"<br>");
 
-    // var result = $("#result");
-    //
-    // var html = '<h2>' + name + '</h2>' +
-    //     '<h4>' + sex + '</h4>' +
-    //     '<h4>' + language + '</h4>' +
-    //     '<ul class="cf">';
-    //
-    // html += '</ul>';
-    //
-    // result.append(html);
+    var html = '<h2 id="h2"><span style="background-color:#FFCACA;">' + name + '</span></h2>' +
+        '<h4>' + sex + '</h4>' +
+        '<h4>' + language + '</h4>' +
+        '<ul class="cf">';
+
+    html += '</ul>';
+
+    return html;
 
 }

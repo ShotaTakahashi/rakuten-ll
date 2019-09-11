@@ -7,6 +7,11 @@
     <script type="text/javascript" src="controller.js"></script>
     <script type="text/javascript" src="show-result.js"></script>
     <link rel="stylesheet" type="text/css" href="style/style.css">
+    <script type="text/javascript">
+        window.onload = function(){
+            showResults();
+        };
+    </script>
 </head>
 <body>
 
@@ -15,7 +20,8 @@
 </header>
 
 
-<button id = "getIt" onclick = "getWeatherFromApi()">Get JSON</button>
-<button id = "showResult" onclick="showResults()">Show Results</button>
+<!--<button id = "getIt" onclick = "getWeatherFromApi()">Get JSON</button>-->
+<!--<button id = "showResult" onclick="showResults()">Show Results</button>-->
+<div id = "guidance-list">ここ</div>
 </body>
 </html>
