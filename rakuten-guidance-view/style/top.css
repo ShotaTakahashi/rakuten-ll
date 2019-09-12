@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
 .title{
   color: lightyellow;
@@ -19,21 +20,20 @@
 }
 
 body {
-  background-color: #00838f;
+  background-color: lightblue;
   background-image:
-          radial-gradient(#26A69A 1px, transparent 1px);
+          radial-gradient(gray 1px, transparent 1px);
   background-size: 20px 20px;
+  font-family: 'Press Start 2P', cursive;
 }
 
-body {
-  font-family: 'M PLUS 1p', sans-serif;
-}
 
 .search-arguments {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  padding-bottom: 100px;
 }
 
 .select {
@@ -44,7 +44,7 @@ body {
     float: left;
     min-width: 200px;
     /*margin: 0px 33%;*/
-  color: lightyellow;
+  color: dimgray;
   padding: 20px 10px;
   }
 
@@ -107,11 +107,13 @@ body {
     background: lightgoldenrodyellow;/*ボタン色*/
     color: gray;
     border-bottom: solid 4px #627295;
-    border-radius: 3px;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
   }
   #search-button:hover {
     /*ボタンを押したとき*/
     -webkit-transform: translateY(30px);
     transform: translateY(4px);/*下に動く*/
     border-bottom: none;/*線を消す*/
+    /*font-family: 'Press Start 2P', cursive;*/
   }

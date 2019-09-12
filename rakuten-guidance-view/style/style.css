@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo&display=swap');
 
 body {
     /*background-image: url("../image/background.jpeg");*/
@@ -14,6 +15,10 @@ body {
     padding: 20px 20px;
 }
 
+#guidance-list {
+    font-family: 'Baloo', cursive;
+}
+
 #all-guidances {
     display: -webkit-flex;
     display: inline-flex;
@@ -26,15 +31,17 @@ body {
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 10px;
     color: gray;
-    background-image: linear-gradient(whitesmoke 0%, lightblue 100%);
+    background-color: lightcyan;
+    /*background-image: linear-gradient(whitesmoke 0%, lightblue 90%);*/
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
     border-bottom: solid 3px #5e7fca;
+    padding-bottom: 20px;
     /*width: 500px;*/
 }
 
-#one-box-for-guidance:active{
+#one-box-for-guidance:hover{
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
@@ -54,6 +61,7 @@ body {
 
 #guidance-strings {
 
+    font-family: 'Baloo', cursive;
 }
 
 #guidance-name {
