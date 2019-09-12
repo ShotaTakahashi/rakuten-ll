@@ -12,11 +12,10 @@ def all_search_get():
     return all_search.get(request_param)
 
 
-@app.route('/teachers/user', methods=['GET'])
+@app.route('/teachers/user/', methods=['GET'])
 def get_user():
     user_id = request.args.get("user_id")
     return show_user.get_user_from_db(user_id)
-
 
 if __name__ == '__main__':
     app.run(debug=True)

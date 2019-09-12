@@ -110,7 +110,7 @@ if __name__ == "__main__":
     region_table_data = []
     activity_area_table_data = []
 
-    languages = ['English', 'Japanese', 'Pokémon', 'French', 'German', 'Chinese']
+    languages = ['English', 'Japanese', 'Pokémon', 'French', 'German', 'Chinese', 'Russian']
     for i, lan in enumerate(languages):
         language_table_data.append((
             ('language_id', i),
@@ -118,7 +118,8 @@ if __name__ == "__main__":
     for item in language_table_data:
         mysql.InsertSQL('language', item)
 
-    available_language_dict = {0:(0, 1), 1:(0,1,3,4,5), 2:(0,1), 3:(1, 2)}
+    available_language_dict = {0:(0, 1), 1:(0,1,3,4,5), 2:(0,1), 3:(1, 2), 4:(1,2,3), \
+        5:(1,3), 6:(1,4), 7:(1,5), 8:(1,6), 9:(1,2,4), 10:(1,3,5), 11:(1,3), 12:(1,5), 13:(1,6), 13:(1,2), 14:(1,4)}
     available_language_list = [(key,value) for key in available_language_dict for value in available_language_dict[key] ]
     for i, (k,v) in enumerate(available_language_list):
         available_language_table_data.append((
@@ -128,7 +129,7 @@ if __name__ == "__main__":
     for item in available_language_table_data:
         mysql.InsertSQL('available_language', item)
 
-    regions = ['sinjuku', 'sibuya', 'chiyoda', 'sinagawa', 'meguro']
+    regions = ['sinjuku', 'sibuya', 'chiyoda', 'sinagawa', 'meguro', 'hatioji', 'taitou']
     for i, reg in enumerate(regions):
         region_table_data.append((
             ('region_id', i),
@@ -136,7 +137,8 @@ if __name__ == "__main__":
     for item in region_table_data:
         mysql.InsertSQL('region', item)
 
-    activity_area_dict = {0:(0, 1), 1:(0,1,2,3,4), 2:(3,), 3:(4,)}
+    activity_area_dict = {0:(0, 1), 1:(0,1,2,3,4), 2:(3,), 3:(4,), 3:(2,3,), 5:(1,3,), 
+    6:(4,), 7:(5,), 8:(6,), 9:(2,4,), 10:(1,3,5,), 11:(1,3,), 12:(2,5,), 13:(3,6,), 13:(2,4,), 14:(4,)}
     activity_area_list = [(key,value) for key in activity_area_dict for value in activity_area_dict[key]]
     for i, (k,v) in enumerate(activity_area_list):
         activity_area_table_data.append((
@@ -146,34 +148,22 @@ if __name__ == "__main__":
     for item in activity_area_table_data:
         mysql.InsertSQL('activity_area', item)
 
-    guidance_table_data.append((
-        ('guidance_id',0),
-        ('name','Mikki'),
-        ('sex','M'),
-        ('price',3000),
-        ('age',54),
-        ('rating',4.2)))
-    guidance_table_data.append((
-        ('guidance_id',1),
-        ('name','Doraemon'),  
-        ('sex','M'),
-        ('price',4000),
-        ('age',200),
-        ('rating',3.7)))
-    guidance_table_data.append((
-        ('guidance_id',2),
-        ('name','Shizuka'),
-        ('sex','F'),
-        ('price',2000),
-        ('age',10),
-        ('rating',2.5)))
-    guidance_table_data.append((
-        ('guidance_id',3),
-        ('name','Nyarth'),
-        ('sex','M'),
-        ('price',4000),
-        ('age',5),
-        ('rating',3.2)))
+    guidance_table_data.append((('guidance_id',0),('name','Mikki'),('sex','M'),('price',3000),('age',54),('rating',4.2)))
+    guidance_table_data.append((('guidance_id',1),('name','Doraemon'),  ('sex','M'),('price',4000),('age',200),('rating',3.7)))
+    guidance_table_data.append((('guidance_id',2),('name','Shizuka'),('sex','F'),('price',2000),('age',10),('rating',2.5)))
+    guidance_table_data.append((('guidance_id',3),('name','Nyarth'),('sex','M'),('price',4000),('age',5),('rating',2.2)))
+    guidance_table_data.append((('guidance_id',4),('name','Conan'),('sex','M'),('price',2300),('age',10),('rating',4.2)))
+    guidance_table_data.append((('guidance_id',5),('name','Luffy'),('sex','M'),('price',1000),('age',10),('rating',4.5)))
+    guidance_table_data.append((('guidance_id',6),('name','Uzumaki'),('sex','M'),('price',4300),('age',10),('rating',4.1)))
+    guidance_table_data.append((('guidance_id',7),('name','Elric'),('sex','M'),('price',1000),('age',10),('rating',3.7)))
+    guidance_table_data.append((('guidance_id',8),('name','Nami'),('sex','F'),('price',2000),('age',10),('rating',3.4)))
+    guidance_table_data.append((('guidance_id',9),('name','Fujiko Mine'),('sex','F'),('price',3000),('age',10),('rating',1.8)))
+    guidance_table_data.append((('guidance_id',10),('name','Salior Venus'),('sex','F'),('price',5000),('age',10),('rating',4.4)))
+    guidance_table_data.append((('guidance_id',11),('name','Pikuchu'),('sex','M'),('price',3600),('age',10),('rating',5.0)))
+    guidance_table_data.append((('guidance_id',12),('name','Natsu Dragneel'),('sex','M'),('price',2100),('age',10),('rating',3.2)))
+    guidance_table_data.append((('guidance_id',13),('name','Nobita'),('sex','M'),('price',100),('age',10),('rating',0.0)))
+    guidance_table_data.append((('guidance_id',14),('name','Light Yagami'),('sex','M'),('price',3000),('age',10),('rating',5.0)))
+    
     for item in guidance_table_data:
         mysql.InsertSQL('guidance', item)
         
