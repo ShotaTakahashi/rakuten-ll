@@ -1,36 +1,17 @@
-h1 {
-    position: relative;
-    color: #333;
-    /*display: inline-block;*/
-    display: flex;
-    text-align: center;
-    margin: 100px 100px;
-    text-shadow: 0 0 2px white;
 
-}
-h1:before {
-    content: "";
-    position: absolute;
-    background: lightgreen;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    top: 50%;
-    border: dashed 1px white;
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    z-index: -1;
-    box-shadow: 0px 0px 0px 5px lightgreen;
-}
-
-h2 {
-    color: rebeccapurple;
+body {
+    background-image: url("../image/background1.jpg");
 }
 
 .title-text {
+    text-align: center;
+}
+
+.title-image{
     display: flex;
     justify-content: space-around;
+    text-align: center;
+    padding: 20px 20px;
 }
 
 #all-guidances {
@@ -41,7 +22,23 @@ h2 {
 }
 
 #one-box-for-guidance {
-    padding: 10px 10px;
+    /*padding: 10px 10px;*/
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    color: gray;
+    background-image: linear-gradient(whitesmoke 0%, lightblue 100%);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #5e7fca;
+    /*width: 500px;*/
+}
+
+#one-box-for-guidance:active{
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
 }
 
 #top-of-box {
@@ -92,5 +89,8 @@ h2 {
 #guidance-rating {
     color: orange;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    /*width: 150px;*/
+    height: 30px;
+    text-align: center;
 }
