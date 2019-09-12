@@ -34,20 +34,3 @@ function searchTeacher(){
     });
 };
 
-function showTeacher() {
-    var headerURL = "http://127.0.0.1:5000/";
-    var params = "teachers/user/?";
-    var user_id = "user_id=" + $("#guidance_id").val();
-    //var user_id = $(this).val();
-
-    console.log(headerURL);
-    console.log(user_id);
-    console.log(this);
-    //return headerURL + params + user_id;
-}
-
-$('button').on('click',function(){
-    var user_id = $(this).val();
-    console.log("hello");
-    console.log(user_id);
-});

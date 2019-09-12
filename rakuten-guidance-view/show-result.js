@@ -55,8 +55,7 @@ function displayOneCandidate(candidate) {
         '<h4>' + sex + '</h4>' +
         '<h4>' + language + '</h4>' +
         '<ul class="cf">' +
-        '<button  id="button" value=' + id + '>送信</button>';
-
+        '<button id="' + id + '" onclick="location.href=\'./guidance_page.html?user_id=' + id + '\'">' + id + '</button>';
 
     html += '</ul>';
 
