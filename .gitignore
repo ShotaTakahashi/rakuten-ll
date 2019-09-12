@@ -13,7 +13,6 @@ __pycache__
 *.csv
 *.xlsx
 performance_result
-*.png
 .vscode
 .env
 *.json
