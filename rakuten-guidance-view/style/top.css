@@ -1,14 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento');
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+
+.title{
+  color: lightyellow;
+  /*display: flex;*/
+  text-align: center;
+  font-family: 'Sacramento', cursive;
+}
+#title-text {
+  /*display: flex;*/
+  /*text-align: center;*/
+  font-size: 40px;
+  padding: 30px;
+}
+
+#trave-panda {
+  height: 140px;
+}
+
+body {
+  background-color: #00838f;
+  background-image:
+          radial-gradient(#26A69A 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+body {
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
 .search-arguments {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .select {
     position: relative;
     /*Don't really need this just for demo styling*/
     text-align:center;
+  /*flex-wrap: wrap;*/
     float: left;
     min-width: 200px;
-    margin: 0px 33%;
+    /*margin: 0px 33%;*/
+  color: lightyellow;
+  padding: 20px 10px;
   }
 
   .select:after {
@@ -55,7 +92,9 @@
   }
 
   .form-search-teacher{
-      text-align:center;
+    /*display: flex;*/
+    flex-wrap: wrap;
+    text-align:center;
   }
 
   #search-button {
@@ -65,8 +104,8 @@
     height:50px;
     padding: 0.5em 1em;
     text-decoration: none;
-    background: #668ad8;/*ボタン色*/
-    color: #FFF;
+    background: lightgoldenrodyellow;/*ボタン色*/
+    color: gray;
     border-bottom: solid 4px #627295;
     border-radius: 3px;
   }
