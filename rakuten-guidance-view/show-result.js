@@ -38,7 +38,7 @@ function displayOneCandidate(candidate) {
     var rating = candidate.rating;
 
     var html = '<div id="all-guidances">' +
-        '  <button type="button" id="one-box-for-guidance">' +
+        '  <button type="button" id="one-box-for-guidance" onclick="location.href=\'./guidance_page.html?user_id=' + id + '\'">' +
         '  <div id="top-of-box">' +
         '  <div id="guidance-img-box">' +
         '  <img src="' + selectImg(sex, id) + '" id="guidance-img">' +
