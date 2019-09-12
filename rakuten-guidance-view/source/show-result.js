@@ -69,25 +69,25 @@ function selectImg(sex, id) {
     if (sex == 'M'){
         switch (id % 4) {
             case 0:
-                img = "image/boy1.png";
+                img = "../image/boy1.png";
                 break;
             case 1:
-                img = "image/boy2.png";
+                img = "../image/boy2.png";
                 break;
             case 2:
-                img = "image/boy3.png";
+                img = "../image/boy3.png";
                 break;
             case 3:
-                img = "image/boy4.png";
+                img = "../image/boy4.png";
                 break;
         }
     } else {
         switch (id % 4) {
             case 0:
-                img = "image/girl1.png";
+                img = "../image/girl1.png";
                 break;
             case 1:
-                img = "image/girl2.png";
+                img = "../image/girl2.png";
                 break;
             // case 2:
             //     img = "image/boy3.png";
@@ -106,17 +106,17 @@ function selectRatingStars(rating) {
     var img = "";
 
     if (rating < 1) {
-        img = "image/star0.png";
+        img = "../image/star0.png";
     } else if (rating < 2) {
-        img = "image/star1.png";
+        img = "../image/star1.png";
     } else if (rating < 3) {
-        img = "image/star2.png";
+        img = "../image/star2.png";
     } else if (rating < 4) {
-        img = "image/star3.png";
+        img = "../image/star3.png";
     } else if (rating < 5) {
-        img = "image/star4.png";
+        img = "../image/star4.png";
     } else {
-        img = "image/star5.png";
+        img = "../image/star5.png";
     }
 
     return img;
