@@ -24,6 +24,7 @@ function arrangeListOfCandidates(json) {
 
     var results = document.getElementById("guidance-list");
     results.innerHTML = html;
+    location.href = "#guidance-list";
 }
 
 function displayOneCandidate(candidate) {
