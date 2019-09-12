@@ -4,6 +4,7 @@
         <title>Rakten Travel Language Translate Agency</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script type="text/javascript" src="controller.js"></script>
+        <link rel="stylesheet" type="text/css" href="style/top.css">
     </head>
     <body>
         <!-- header -->
@@ -12,9 +13,8 @@
         <!-- headerここまで -->
         <div class="section1">
             <p1>Welcome to Rakten Travel Language Translate Agency!</p1>
-
         <div class="form-search-teacher">
-            <div class="select-language">
+            <div class="select">
                 <p>Language</p>
                 <select id="language">
                     <option name="English" value="English">English</option>
@@ -22,14 +22,15 @@
                     <option name="china" value="China">China</option>
                 </select>
             </div>
-            <div class="select-gender">
+            
+            <div class="select">
                 <p>Sex</p>
                 <select id="sex">
                     <option name="Male" value="M">Male</option>
                     <option name="Female" value="F">Female</option>
                 </select>
             </div>
-            <div class="select-region">
+            <div class="select">
                 <p>Region</p>
                 <select id="region">
                     <option value="sinjuku">sinjuku</option>
@@ -39,27 +40,29 @@
                     <option value="meguro">meguro</option>
                 </select>
             </div>
-            <div class="select-price">
+            <div class="select">
                 <p>MinPrice</p>
                 <select id="price_low">
-                    <option value="0">下限なし</option>
+                    <option value="0">no lower limit</option>
                     <option value="500">500</option>
                     <option value="1000">1000</option>
                     <option value="2000">2000</option>
                     <option value="3000">3000</option>
                 </select>
-                <!--<input id="minprice" type="text" value=""> -->
+            </div>
+            <div class="select">
                 <p>MaxPrice</p>
+                <!--<input id="minprice" type="text" value=""> -->
                 <select id="price_high">
                     <option value="5000">5000</option>
                     <option value="6000">6000</option>
                     <option value="7000">7000</option>
                     <option value="8000">8000</option>
                     <option value="9000">9000</option>
-                    <option value="1000000000000" selected>上限なし</option>
+                    <option value="1000000000000" selected>no upper limit</option>
                 </select>
             </div>
-            <div class="age">
+            <div class="select">
                 <p>MinAge</p>
                 <select id="age_low">
                     <option value="18">18</option>
@@ -68,17 +71,18 @@
                     <option value="40">40</option>
                     <option value="50">50</option>
                 </select>
+            </div>
+            <div class="select">
                 <p>MaxAge</p>
                 <select id="age_high">
                     <option value="18">18</option>
                     <option value="25">25</option>
                     <option value="30" selected>30</option>
                     <option value="40">40</option>
-                    <option value="1000" selected>上限なし</option>
+                    <option value="1000" selected>no upper limit</option>
                 </select>
             </div>
-            
-            <div class="rate">
+            <div class="select">
                 <p>MinRate</p>
                 <select id="rating_low">
                     <option value="0">0</option>
@@ -88,6 +92,8 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
+            </div>
+            <div class="select">
                 <p>MaxRate</p>
                 <select id="rating_high">
                     <option value="1">1</option>
@@ -97,10 +103,11 @@
                     <option value="5" selected>5</option>
                 </select>
             </div>
-            <div>
-                <button id="search-button" value="送信" onclick = "searchTeacher()">送信</button>
+            <div class="select">
+                <button id="search-button" value="送信" onclick = "location.href='./show_guidance_list.html'">search</button>
             </div>
         </div>
+        <!--
         <footer>
             <ul>
                 <li><a href="">お問い合わせ</a></li>
@@ -111,6 +118,7 @@
                 <small>楽天トラベル</small>
             </p>
         </footer>
+        -->
     </body>
 </html>
 
