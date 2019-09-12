@@ -9,7 +9,7 @@ function getParam() {
         paramsArray[neet[0]] = neet[1];
     }
     var categoryKey = paramsArray["user_id"];
-    return categoryKey
+    return categoryKey;
 }
 
 
@@ -35,7 +35,7 @@ jQuery(function () {
         });
         select_region += '</select></div>';
 
-        var h = '<div style="background-color: #5e7fca; opacity: 0.8;">' +
+        var h = '<div style="background-color: #5e7fca; opacity: 0.7;" id="guidance-box">' +
             '<div id="guidance-img-box">' +
             '  <img src="' + selectImg(sample_list.sex, sample_list.guidance_id) + '" id="guidance-img">' +
             '</div>' +

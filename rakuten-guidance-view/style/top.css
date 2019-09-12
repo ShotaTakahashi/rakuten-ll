@@ -27,7 +27,6 @@ body {
   font-family: 'Press Start 2P', cursive;
 }
 
-
 .search-arguments {
   display: flex;
   flex-direction: column;
@@ -37,13 +36,13 @@ body {
 }
 
 .select {
-    position: relative;
-    /*Don't really need this just for demo styling*/
-    text-align:center;
+  position: relative;
+  /*Don't really need this just for demo styling*/
+  text-align:center;
   /*flex-wrap: wrap;*/
-    float: left;
-    min-width: 200px;
-    /*margin: 0px 33%;*/
+  float: left;
+  min-width: 200px;
+  /*margin: 0px 33%;*/
   color: dimgray;
   padding: 20px 10px;
   }

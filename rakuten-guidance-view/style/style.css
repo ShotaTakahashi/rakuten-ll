@@ -107,3 +107,8 @@ body {
     display: flex;
     justify-content: space-around;
 }
+#guidance-box {
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    align-items: center;
+}
