@@ -1,3 +1,4 @@
+
 function searchTeacher(){
     var params_array = [];
     var params = "teachers/search/?";
@@ -22,14 +23,25 @@ function searchTeacher(){
         params = params + "&" + val;
     });
 
-    var requestURL = headerURL + params; 
-    alert(requestURL);
-    
-    $.getJSON(requestURL,function(json){
-        teachersData = JSON.stringify(json);
-        jsonteachersData = JSON.parse(teachersData);
-        console.log(teachersData);
-        console.log(jsonteachersData);
-        return teachersData;
-    });
+    var requestURL = headerURL + params;
+    console.log(requestURL);
+    // alert(requestURL);
+
+    console.clear();
+
+    console.log(requestURL);
+    // console.log(jsonData);
+    // console.log(jsonData['responseJSON']);
+
+
+    // $.ajax({
+    //     type: 'GET',
+    //     url: requestURL,
+    //     dataType: 'json',
+    //     success: function(json){
+    //         console.log(json);
+    //     }
+    // });
+
+    return requestURL;
 };

@@ -1,10 +1,9 @@
 
 //テキストファイルを読み込んであれやこれやする関数
-function showResults() {
+function showResults(URL) {
 
-    console.clear();
+    console.log(URL);
 
-    var URL = "http://127.0.0.1:5000/teachers/search/?sex=M&language=Japanese&region=sibuya&price_low=20&price_high=10000&rating_low=0.5&rating_high=5.0&age_low=1&age_high=400";
     $.getJSON(URL,function(json){
         data = JSON.stringify(json);
         jsonData = JSON.parse(data);
