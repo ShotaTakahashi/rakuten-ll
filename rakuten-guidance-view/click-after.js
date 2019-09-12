@@ -23,25 +23,25 @@ jQuery(function () {
     var requestURL = headerURL + params + user_id;
     console.log(requestURL)
     $.getJSON(requestURL, function(sample_list){
-        var h = '<dt>'
+        var h = '<h1>'
             + sample_list.name
-            + '</dt>'
-            + '<dd>'
+            + '</h1>'
+            + '<dd><b>Sex</b>: '
             + sample_list.sex
             + '</dd>'
-            + '<dd>'
+            + '<dd><b>Price</b>: ¥'
             + sample_list.price
             + '</dd>'
-            + '<dd>'
+            + '<dd><b>Age</b>: '
             + sample_list.age
             + '</dd>'
-            + '<dd>'
+            + '<dd><b>Rating</b>: '
             + sample_list.rating
             + '</dd>'
-            + '<dd>'
+            + '<dd><b>Laguages</b>: '
             + sample_list.language
             + '</dd>'
-            + '<dd>'
+            + '<dd><b>Available regions</b>: '
             + sample_list.region
             + '</dd>';
         $("dl#wrap").append(h);
