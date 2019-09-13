@@ -82,7 +82,7 @@ function selectImg(sex, id) {
                 break;
         }
     } else {
-        switch (id % 4) {
+        switch (id % 2) {
             case 0:
                 img = "../image/girl1.png";
                 break;
