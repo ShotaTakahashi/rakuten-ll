@@ -18,7 +18,7 @@ jQuery(function () {
 
     var headerURL = "http://127.0.0.1:5000/";
     var params = "teachers/user/?";
-    var user_id = "user_id=" + idx;
+    var user_id = "guide_id=" + idx;
 
     var requestURL = headerURL + params + user_id;
     console.log(requestURL)
@@ -35,14 +35,14 @@ jQuery(function () {
         });
         select_region += '</select></div>';
 
-        var h = '<div style="background-color: #5e7fca; opacity: 0.7;" id="guidance-box">' +
+        var h = '<div style="background-color: #5e7fca; opacity: 0.7;" id="guide-box">' +
             '<div id="guidance-img-box">' +
-            '  <img src="' + selectImg(sample_list.sex, sample_list.guidance_id) + '" id="guidance-img">' +
+            '  <img src="' + selectImg(sample_list.sex, sample_list.guidance_id) + '" id="guide-img">' +
             '</div>' +
             '<h1>' + sample_list.name + '</h1>' +
             '<dd><b>Sex</b>: ' + sample_list.sex + '</dd>' +
             '<dd><b>Age</b>: ' + sample_list.age + '</dd>' +
-            '<dd><b>Rating</b>: ' + '<img src="' + selectRatingStars(sample_list.rating) + '" id="guidance-rating" width="70" height="15"></dd>' +
+            '<dd><b>Rating</b>: ' + '<img src="' + selectRatingStars(sample_list.rating) + '" id="guide-rating" width="70" height="15"></dd>' +
             '<br></div>' +
             '<div style="background-color: white; opacity: 0.8; display: flex; align-content: space-between">' +
             select_language + select_region +

@@ -12,18 +12,18 @@
     padding: 20px 20px;
 }
 
-#guidance-list {
+#guide-list {
     font-family: 'Baloo', cursive;
 }
 
-#all-guidances {
+#all-guides {
     display: -webkit-flex;
     display: inline-flex;
     flex-wrap: wrap;
     padding: 15px 10px;
 }
 
-#one-box-for-guidance {
+#one-box-for-guide {
     /*padding: 10px 10px;*/
     display: inline-block;
     padding: 0.5em 1em;
@@ -38,7 +38,7 @@
     /*width: 500px;*/
 }
 
-#one-box-for-guidance:hover{
+#one-box-for-guide:hover{
     -webkit-transform: translateY(4px);
     transform: translateY(4px);
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
@@ -50,48 +50,48 @@
     display: flex;
 }
 
-#guidance-img {
+#guide-img {
     width: 150px;
     height: 150px;
     padding: 10px 10px;
 }
 
-#guidance-strings {
+#guide-strings {
 
     font-family: 'Baloo', cursive;
 }
 
-#guidance-name {
+#guide-name {
     padding: 10px 10px;
     font-size: 30px;
 }
 
-#guidance-languages {
+#guide-languages {
     display: -webkit-flex;
     display: flex;
 }
 
-#guidance-language {
+#guide-language {
     padding: 5px 10px;
 }
 
-#guidance-regions {
+#guide-regions {
     display: -webkit-flex;
     display: flex;
 }
 
-#guidance-region {
+#guide-region {
     padding: 5px 10px;
 }
 
-#guidance-price {
+#guide-price {
     padding: 5px 10px;
 }
 #bottom-of-box {
 
 }
 
-#guidance-rating {
+#guide-rating {
     color: orange;
     display: flex;
     justify-content: space-around;
@@ -105,7 +105,7 @@
     justify-content: center;
     padding-top: 0;
 }
-#guidance-box {
+#guide-box {
     /*display: flex;*/
     /*justify-content: space-around;*/
     align-items: center;

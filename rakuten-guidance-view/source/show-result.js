@@ -22,7 +22,7 @@ function arrangeListOfCandidates(json) {
     }
     // document.write(html);
 
-    var results = document.getElementById("guidance-list");
+    var results = document.getElementById("guide-list");
     results.innerHTML = html;
     location.href = "#guidance-list";
 }
@@ -37,24 +37,24 @@ function displayOneCandidate(candidate) {
     var region = candidate.region;
     var rating = candidate.rating;
 
-    var html = '<div id="all-guidances">' +
-        '  <button type="button" id="one-box-for-guidance" onclick="location.href=\'./guidance_page.html?user_id=' + id + '\'">' +
-        '  <div id="top-of-box">' +
+    var html = '<div id="all-guides">' +
+        '  <button type="button" id="one-box-for-guide" onclick="location.href=guide_page.html' + id + '' +
+        ' <div id="top-of-box">' +
         '  <div id="guidance-img-box">' +
-        '  <img src="' + selectImg(sex, id) + '" id="guidance-img">' +
+        '  <img src="' + selectImg(sex, id) + '" id="guide-img">' +
         '  </div>' +
-        '  <div id="guidance-strings">' +
-        '  <div id="guidance-name">' + name + '</div>' +
-        '  <div id="guidance-languages">' +
-        '  <div id="guidance-language">' + arrangeArrayOfString(language) + '</div>' +
+        '  <div id="guide-strings">' +
+        '  <div id="guide-name">' + name + '</div>' +
+        '  <div id="guide-languages">' +
+        '  <div id="guide-language">' + arrangeArrayOfString(language) + '</div>' +
         // '  <div id="guidance-language">English</div>' +
         '  </div>' +
-        '  <div id="guidance-regions">' +
-        '  <div id="guidance-region">' + arrangeArrayOfString(region) + '</div>' +
+        '  <div id="guide-regions">' +
+        '  <div id="guide-region">' + arrangeArrayOfString(region) + '</div>' +
         // '  <div id="guidance-region">' + region + '</div>' +
         '  </div>' +
-        '  <div id="guidance-price">¥' + price + '</div>' +
-        '  <img src="' + selectRatingStars(rating) + '" id="guidance-rating">' +
+        '  <div id="guide-price">¥' + price + '</div>' +
+        '  <img src="' + selectRatingStars(rating) + '" id="guide-rating">' +
         '  </div>' +
         '  </div>' +
         '  </div>';
