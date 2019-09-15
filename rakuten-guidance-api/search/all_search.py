@@ -1,6 +1,6 @@
 import pymysql.cursors
 import json
-from operate_user.show_user import get_user_from_db
+from operate_guide.show_guide import get_user_from_db
 
 
 def get(request_params):

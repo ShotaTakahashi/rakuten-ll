@@ -2,7 +2,7 @@ import pymysql.cursors
 import json
 
 
-class NotFoundExceptionError(Exception):
+class NotFoundGuideException(Exception):
     pass
 
 
@@ -27,7 +27,7 @@ def get_user_from_db(user_id):
         guidance_mes = cursor.fetchone()
 
         if guidance_mes is None:
-            raise NotFoundExceptionError("Guidance Id does not exist")
+            raise NotFoundGuideException("Guide Id does not exist")
 
         sql = "SELECT language FROM language WHERE language_id in (SELECT language_id FROM `available_language` WHERE guidance_id=%s)"%(user_id)
         cursor.execute(sql)
