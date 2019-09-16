@@ -20,7 +20,7 @@ You need database.json. For example,
 Then, 
 ```
 cd rakuten-ll/rakuten-guidance-api
-python data-create.py
+python data_create.py
 ```
 
 ### Start API (flask)
